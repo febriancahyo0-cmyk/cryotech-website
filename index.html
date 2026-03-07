@@ -15,6 +15,15 @@
         h1, h2, h3, h4, h5, .brand-font { font-family: 'Montserrat', sans-serif; }
         .service-card img { transition: transform 0.3s ease; }
         .service-card:hover img { transform: scale(1.05); }
+        
+        /* Smooth Transition untuk Dropdown */
+        .dropdown-animate {
+            transition: all 0.3s ease;
+            transform: translateY(10px);
+        }
+        .group:hover .dropdown-animate {
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-900">
@@ -24,10 +33,46 @@
             <img src="Cryo TEch logo2.png" alt="Logo CRYO Tech" class="h-12 w-auto">
             <span class="text-xl font-bold tracking-tight hidden sm:block">CRYO TECH</span>
         </div>
+        
         <ul class="hidden lg:flex gap-8 text-sm font-medium uppercase tracking-wide">
             <li><a href="#" class="hover:text-red-600 transition">Home</a></li>
             <li><a href="#services" class="hover:text-red-600 transition">Services</a></li>
-            <li><a href="#prices" class="hover:text-red-600 transition">Harga</a></li>
+            
+            <li class="relative group">
+                <button class="hover:text-red-600 transition flex items-center gap-1 focus:outline-none uppercase">
+                    Harga <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
+                </button>
+                <div class="absolute left-0 mt-2 w-64 bg-white text-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible dropdown-animate border border-gray-100 overflow-hidden z-[100]">
+                    <a href="#prices" class="block px-5 py-4 hover:bg-red-50 hover:text-red-600 border-b border-gray-50 transition">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-snowflake text-blue-500 text-lg"></i>
+                            <div>
+                                <p class="font-bold text-xs">LAYANAN AC</p>
+                                <p class="text-[10px] text-gray-500 font-normal">Cuci, Freon & Instalasi</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#prices" class="block px-5 py-4 hover:bg-red-50 hover:text-red-600 border-b border-gray-50 transition">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-icicles text-cyan-500 text-lg"></i>
+                            <div>
+                                <p class="font-bold text-xs uppercase">Kulkas & Freezer</p>
+                                <p class="text-[10px] text-gray-500 font-normal">Perbaikan & Sparepart</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#prices" class="block px-5 py-4 hover:bg-red-50 hover:text-red-600 transition">
+                        <div class="flex items-center gap-3">
+                            <i class="fa-solid fa-soap text-purple-500 text-lg"></i>
+                            <div>
+                                <p class="font-bold text-xs uppercase">Mesin Cuci</p>
+                                <p class="text-[10px] text-gray-500 font-normal">Servis Putaran & Modul</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </li>
+            
             <li><a href="#portfolio" class="hover:text-red-600 transition">Portfolio</a></li>
             <li><a href="#contact" class="hover:text-red-600 transition">Contact</a></li>
         </ul>
@@ -47,7 +92,7 @@
         <img src="cover.jpg" class="absolute inset-0 w-full h-full object-cover" alt="Technician CRYO Tech">
         
         <div class="relative z-20 px-6 md:px-20 max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-2 leading-tight">CRYO TECH</h1>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-2 leading-tight uppercase">CRYO TECH</h1>
             <p class="text-xl md:text-2xl font-medium mb-6 text-red-100 italic">HVAC & Refrigeration Specialist</p>
             <h2 class="text-2xl md:text-4xl font-semibold mb-4 text-white">Solusi Cepat & Terpercaya untuk Pendingin & Home Appliances Anda</h2>
             <p class="text-lg mb-8 opacity-90 max-w-2xl">Teknisi profesional siap datang ke lokasi di Pasuruan & sekitarnya. Cepat, Bergaransi, dan Transparan.</p>
@@ -145,25 +190,10 @@
         </div>
     </section>
 
-    <section id="portfolio" class="bg-white py-24 px-6 md:px-20 text-center">
-        <p class="text-red-600 font-bold tracking-widest uppercase mb-2">Portfolio</p>
-        <h3 class="text-4xl font-extrabold text-[#001f3f] mb-4">Galeri Pekerjaan Kami</h3>
-        <p class="text-gray-500 mb-12">Bukti pengerjaan teknisi CRYO Tech di lapangan</p>
-        
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="https://images.unsplash.com/photo-1621905252507-b3522210756a?auto=format&fit=crop&w=500&h=500" class="rounded-xl w-full h-64 object-cover hover:brightness-75 transition cursor-pointer" alt="Work 1">
-            <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&w=500&h=500" class="rounded-xl w-full h-64 object-cover hover:brightness-75 transition cursor-pointer" alt="Work 2">
-            <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=500&h=500" class="rounded-xl w-full h-64 object-cover hover:brightness-75 transition cursor-pointer" alt="Work 3">
-            <img src="https://images.unsplash.com/photo-1631548233842-8246bc99e284?auto=format&fit=crop&w=500&h=500" class="rounded-xl w-full h-64 object-cover hover:brightness-75 transition cursor-pointer" alt="Work 4">
-        </div>
-    </section>
-
     <section id="contact" class="bg-[#001f3f] py-24 px-6 md:px-20 text-white">
         <div class="flex flex-wrap md:flex-nowrap gap-16">
             <div class="w-full md:w-1/2">
                 <h3 class="text-5xl font-extrabold mb-8 text-white">Hubungi Kami</h3>
-                <p class="text-gray-400 mb-10 text-lg">Punya kendala barang elektronik? Jangan ditunda, chat kami sekarang untuk jadwalkan kunjungan!</p>
-                
                 <div class="space-y-6 mb-10 text-lg">
                     <div class="flex items-start gap-4">
                         <i class="fa-solid fa-phone text-cyan-400 mt-1"></i>
@@ -178,7 +208,6 @@
                         <span>kingcryotech@gmail.com</span>
                     </div>
                 </div>
-
                 <a href="https://wa.me/6285188188718" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 px-8 py-5 rounded-xl font-bold text-xl shadow-2xl transition transform hover:-translate-y-1">
                     <i class="fa-brands fa-whatsapp text-3xl"></i> Chat WhatsApp Sekarang
                 </a>
@@ -186,12 +215,8 @@
             
             <div class="w-full md:w-1/2 h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-700">
                 <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d247.07534932274498!2d112.77332022789217!3d-7.76801049839159!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1772914861519!5m2!1sen!2sid"
-                    width="100%" 
-                    height="100%" 
-                    style="border:0;" 
-                    allowfullscreen="" 
-                    loading="lazy">
+                    src="http://googleusercontent.com/maps.google.com/5" 
+                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
         </div>
@@ -199,15 +224,15 @@
 
     <footer class="bg-black py-16 px-6 text-center text-gray-500 text-sm">
         <div class="flex justify-center mb-6">
-            <img src="Cryo TEch logo2.png" alt="Logo CRYO Tech" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+            <img src="Cryo TEch logo2.png" alt="Logo CRYO Tech" class="h-16 w-auto opacity-70 transition">
         </div>
         <p class="mb-2">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
         <p class="text-xs uppercase tracking-widest text-gray-700">Pasuruan, Jawa Timur</p>
     </footer>
 
-    <a href="https://wa.me/6285188188718" class="fixed bottom-8 right-8 bg-green-600 text-white p-5 rounded-full shadow-2xl hover:scale-110 hover:rotate-6 transition-all duration-300 z-[100] group">
+    <a href="https://wa.me/6285188188718" class="fixed bottom-8 right-8 bg-green-600 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-all duration-300 z-[100] group">
         <i class="fa-brands fa-whatsapp text-4xl"></i>
-        <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition duration-300 shadow-md">Butuh Servis?</span>
+        <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition shadow-md whitespace-nowrap">Butuh Servis?</span>
     </a>
 
 </body>
