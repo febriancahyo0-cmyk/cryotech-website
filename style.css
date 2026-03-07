@@ -1,18 +1,5 @@
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 40px;
-background:#0b3d91;
-color:white;
-}
-
-.menu{
-display:flex;
-gap:25px;
-list-style:none;
-}
-
-.menu li{
-cursor:pointer;
+.hero{
+background:url('images/ac.jpg');
+background-size:cover;
+padding:120px 0;
 }
