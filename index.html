@@ -4,165 +4,204 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CRYO Tech - HVAC & Refrigeration Specialist</title>
+    <link rel="icon" type="image/png" href="Cryo TEch logo2.png">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        /* Menggunakan Montserrat (Judul) & Roboto (Isi) agar lebih Pro */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500&display=swap');
+        body { font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, h4, h5, .brand-font { font-family: 'Montserrat', sans-serif; }
+        .service-card img { transition: transform 0.3s ease; }
+        .service-card:hover img { transform: scale(1.05); }
     </style>
 </head>
-<body class="bg-gray-50">
+<body class="bg-gray-50 text-slate-900">
 
-    <nav class="bg-[#1e3a8a] text-white py-4 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50">
-        <div class="flex items-center gap-2">
-            <i class="fa-solid fa-snowflake text-2xl"></i>
-            <span class="text-xl font-bold tracking-tight">CRYO TECH</span>
+    <nav class="bg-[#001f3f] text-white py-3 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+        <div class="flex items-center gap-3">
+            <img src="Cryo TEch logo2.png" alt="Logo CRYO Tech" class="h-12 w-auto">
+            <span class="text-xl font-bold tracking-tight hidden sm:block">CRYO TECH</span>
         </div>
-        <ul class="hidden md:flex gap-8 text-sm font-medium">
-            <li><a href="#" class="hover:text-blue-300">Home</a></li>
-            <li><a href="#services" class="hover:text-blue-300">Services</a></li>
-            <li><a href="#portfolio" class="hover:text-blue-300">Portfolio</a></li>
-            <li><a href="#contact" class="hover:text-blue-300">Contact</a></li>
+        <ul class="hidden md:flex gap-8 text-sm font-medium uppercase tracking-wide">
+            <li><a href="#" class="hover:text-red-600 transition">Home</a></li>
+            <li><a href="#services" class="hover:text-red-600 transition">Services</a></li>
+            <li><a href="#prices" class="hover:text-red-600 transition">Harga</a></li>
+            <li><a href="#portfolio" class="hover:text-red-600 transition">Portfolio</a></li>
+            <li><a href="#contact" class="hover:text-red-600 transition">Contact</a></li>
         </ul>
-        <div class="hidden md:block bg-white text-blue-900 px-4 py-2 rounded-md font-bold text-sm">
+        <div class="hidden md:block bg-red-600 text-white px-4 py-2 rounded-md font-bold text-sm">
             <i class="fa-solid fa-phone mr-2"></i> 0851-8818-8718
         </div>
     </nav>
 
-    <header class="relative h-[600px] flex items-center text-white overflow-hidden">
-        <div class="absolute inset-0 bg-blue-900/40 z-10"></div>
-        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=2070" class="absolute inset-0 w-full h-full object-cover" alt="Technician">
+    <header class="relative h-[650px] flex items-center text-white overflow-hidden">
+        <div class="absolute inset-0 bg-[#001f3f]/70 z-10"></div>
+        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=2070" class="absolute inset-0 w-full h-full object-cover" alt="Technician CRYO Tech">
         
         <div class="relative z-20 px-6 md:px-20 max-w-4xl">
-            <h1 class="text-5xl md:text-7xl font-bold mb-2">CRYO TECH</h1>
-            <p class="text-xl md:text-2xl font-light mb-6">HVAC & Refrigeration Specialist</p>
-            <h2 class="text-2xl md:text-3xl font-semibold mb-4 text-blue-100">Service AC, Freezer, dan Refrigeration System</h2>
-            <p class="text-lg mb-8 opacity-90">Teknisi profesional untuk rumah, toko, dan industri.</p>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-2 leading-tight">CRYO TECH</h1>
+            <p class="text-xl md:text-2xl font-medium mb-6 text-red-100 italic">HVAC & Refrigeration Specialist</p>
+            <h2 class="text-2xl md:text-4xl font-semibold mb-4 text-white">Solusi Cepat & Terpercaya untuk Pendingin & Home Appliances Anda</h2>
+            <p class="text-lg mb-8 opacity-90 max-w-2xl">Teknisi profesional siap datang ke lokasi di Pasuruan & sekitarnya. Cepat, Bergaransi, dan Transparan.</p>
             
             <div class="flex flex-wrap gap-4">
-                <a href="#contact" class="bg-green-600 hover:bg-green-700 px-8 py-3 rounded-md font-bold transition">Book Service</a>
-                <a href="https://wa.me/6285188188718" class="border-2 border-white hover:bg-white hover:text-blue-900 px-8 py-3 rounded-md font-bold flex items-center gap-2 transition">
-                    <i class="fa-brands fa-whatsapp text-xl"></i> Chat WhatsApp
+                <a href="https://wa.me/6285188188718" class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-md font-bold text-lg transition flex items-center gap-2 shadow-xl">
+                    <i class="fa-solid fa-calendar-check"></i> Panggil Teknisi Sekarang
                 </a>
             </div>
         </div>
     </header>
 
-    <section id="services" class="py-20 px-6 md:px-20 text-center">
-        <p class="text-blue-600 font-bold tracking-widest uppercase mb-2">Services</p>
-        <h3 class="text-4xl font-bold text-slate-800 mb-12">Layanan Kami</h3>
+    <section id="services" class="py-24 px-6 md:px-20 bg-white">
+        <div class="text-center mb-16">
+            <p class="text-red-600 font-bold tracking-widest uppercase mb-2">Layanan Spesialis</p>
+            <h3 class="text-4xl font-extrabold text-[#001f3f]">Apa Yang Kami Kerjakan?</h3>
+        </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition group">
-                <i class="fa-solid fa-snowflake text-4xl text-blue-600 mb-4"></i>
-                <h4 class="text-xl font-bold mb-4">AC Service</h4>
-                <ul class="text-sm text-gray-600 text-left space-y-2 mb-6">
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Cleaning AC</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Isi Freon - R32/R410</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Perbaikan AC tidak dingin</li>
-                </ul>
-                <img src="https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&q=80&w=400" class="rounded-lg mb-6 w-full h-40 object-cover" alt="Service AC">
-                <button class="w-full py-2 bg-blue-600 text-white rounded font-bold hover:bg-blue-700">Learn More</button>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
+            <div class="service-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="servis-ac.jpg" class="w-full h-64 object-cover" alt="Servis AC">
+                <div class="p-8 text-center">
+                    <h4 class="text-2xl font-bold mb-4 text-[#001f3f]">Servis AC</h4>
+                    <p class="text-gray-600 text-sm mb-6">Cuci rutin, isi freon, perbaikan kompresor, hingga perbaikan modul/remote.</p>
+                    <a href="https://wa.me/6285188188718" class="text-red-600 font-bold hover:underline hover:text-red-700">Konsultasi Gratis →</a>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition">
-                <i class="fa-solid fa-temperature-arrow-down text-4xl text-blue-600 mb-4"></i>
-                <h4 class="text-xl font-bold mb-4">Refrigeration</h4>
-                <ul class="text-sm text-gray-600 text-left space-y-2 mb-6">
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Cold storage</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Freezer Repair</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Display chiller</li>
-                </ul>
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=400" class="rounded-lg mb-6 w-full h-40 object-cover" alt="Refrigeration">
-                <button class="w-full py-2 bg-blue-600 text-white rounded font-bold hover:bg-blue-700">Learn More</button>
+            <div class="service-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="perbaikan-kulkas.jpg" class="w-full h-64 object-cover" alt="Perbaikan Kulkas">
+                <div class="p-8 text-center">
+                    <h4 class="text-2xl font-bold mb-4 text-[#001f3f]">Perbaikan Kulkas</h4>
+                    <p class="text-gray-600 text-sm mb-6">Solusi kulkas tidak dingin, masalah pintu tidak rapat, hingga ganti suku cadang asli.</p>
+                    <a href="https://wa.me/6285188188718" class="text-red-600 font-bold hover:underline hover:text-red-700">Konsultasi Gratis →</a>
+                </div>
             </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition">
-                <i class="fa-solid fa-tools text-4xl text-blue-600 mb-4"></i>
-                <h4 class="text-xl font-bold mb-4">Installation</h4>
-                <ul class="text-sm text-gray-600 text-left space-y-2 mb-6">
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Instalasi AC</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Instalasi Freezer</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Instalasi Unit Baru</li>
-                </ul>
-                <img src="https://images.unsplash.com/photo-1599939339721-17595bf1b70e?auto=format&fit=crop&q=80&w=400" class="rounded-lg mb-6 w-full h-40 object-cover" alt="Installation">
-                <button class="w-full py-2 bg-blue-600 text-white rounded font-bold hover:bg-blue-700">Learn More</button>
+            <div class="service-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="servis-freezer.jpg" class="w-full h-64 object-cover" alt="Servis Freezer Box">
+                <div class="p-8 text-center">
+                    <h4 class="text-2xl font-bold mb-4 text-[#001f3f]">Servis Freezer Box</h4>
+                    <p class="text-gray-600 text-sm mb-6">Pemeliharaan suhu stabil, pintu bocor, dan perawatan kompresor skala industri.</p>
+                    <a href="https://wa.me/6285188188718" class="text-red-600 font-bold hover:underline hover:text-red-700">Konsultasi Gratis →</a>
+                </div>
             </div>
+        </div>
 
-            <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition">
-                <i class="fa-solid fa-clipboard-check text-4xl text-blue-600 mb-4"></i>
-                <h4 class="text-xl font-bold mb-4">Maintenance</h4>
-                <ul class="text-sm text-gray-600 text-left space-y-2 mb-6">
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Kontrak tahunan</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Preventive maintenance</li>
-                    <li><i class="fa-solid fa-check text-blue-500 mr-2"></i>Pembersihan berkala</li>
-                </ul>
-                <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&q=80&w=400" class="rounded-lg mb-6 w-full h-40 object-cover" alt="Maintenance">
-                <button class="w-full py-2 bg-blue-600 text-white rounded font-bold hover:bg-blue-700">Learn More</button>
+        <div class="grid grid-cols-1 lg:grid-cols-3">
+            <div class="lg:col-start-2 service-card bg-gray-50 rounded-2xl overflow-hidden shadow-sm border border-gray-100 hover:shadow-2xl transition duration-300">
+                <img src="servis-mesincuci.jpg" class="w-full h-64 object-cover" alt="Perawatan Mesin Cuci">
+                <div class="p-8 text-center">
+                    <h4 class="text-2xl font-bold mb-4 text-[#001f3f]">Perawatan Mesin Cuci</h4>
+                    <p class="text-gray-600 text-sm mb-6">Servis putar & kering, mesin berisik, hingga perbaikan mati total.</p>
+                    <a href="https://wa.me/6285188188718" class="text-red-600 font-bold hover:underline hover:text-red-700">Konsultasi Gratis →</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="portfolio" class="bg-white py-20 px-6 md:px-20 text-center">
-        <p class="text-blue-600 font-bold tracking-widest uppercase mb-2">Portfolio</p>
-        <h3 class="text-4xl font-bold text-slate-800 mb-4">Portofolio Pekerjaan Kami</h3>
-        <p class="text-gray-500 mb-12">Contoh pekerjaan teknisi Cryo Tech di lapangan</p>
+    <section id="prices" class="py-24 px-6 md:px-20 bg-gray-100">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-extrabold text-[#001f3f] mb-4">Daftar Estimasi Harga</h3>
+                <p class="text-gray-600">Transparansi biaya adalah prioritas kami di CRYO Tech.</p>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
+                <table class="w-full text-left">
+                    <thead class="bg-[#001f3f] text-white">
+                        <tr>
+                            <th class="py-6 px-8 brand-font">Layanan Utama</th>
+                            <th class="py-6 px-8 text-right brand-font">Biaya (Mulai Dari)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-5 px-8 font-medium">Cuci AC Berkala (0.5 - 1 PK)</td>
+                            <td class="py-5 px-8 text-right font-bold text-red-600">Rp 75.000</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-5 px-8 font-medium">Isi / Tambah Freon (R32/R410)</td>
+                            <td class="py-5 px-8 text-right font-bold text-red-600">Rp 150.000</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-5 px-8 font-medium">Servis Kulkas / Freezer (Pengecekan)</td>
+                            <td class="py-5 px-8 text-right font-bold text-red-600">Rp 50.000</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-5 px-8 font-medium">Servis Mesin Cuci</td>
+                            <td class="py-5 px-8 text-right font-bold text-red-600">Rp 100.000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center mt-6 text-sm text-gray-500 italic">*Biaya akhir ditentukan teknisi setelah pengecekan kerusakan di lokasi.</p>
+        </div>
+    </section>
+
+    <section id="portfolio" class="bg-white py-24 px-6 md:px-20 text-center">
+        <p class="text-red-600 font-bold tracking-widest uppercase mb-2">Portfolio</p>
+        <h3 class="text-4xl font-extrabold text-[#001f3f] mb-4">Galeri Pekerjaan Kami</h3>
+        <p class="text-gray-500 mb-12">Bukti pengerjaan teknisi CRYO Tech di lapangan</p>
         
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <img src="https://images.unsplash.com/photo-1621905252507-b3522210756a?auto=format&fit=crop&w=500&h=500" class="rounded-lg w-full h-64 object-cover" alt="Work 1">
-            <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&w=500&h=500" class="rounded-lg w-full h-64 object-cover" alt="Work 2">
-            <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=500&h=500" class="rounded-lg w-full h-64 object-cover" alt="Work 3">
-            <img src="https://images.unsplash.com/photo-1631548233842-8246bc99e284?auto=format&fit=crop&w=500&h=500" class="rounded-lg w-full h-64 object-cover" alt="Work 4">
+            <img src="https://images.unsplash.com/photo-1621905252507-b3522210756a?auto=format&fit=crop&w=500&h=500" class="rounded-xl w-full h-64 object-cover hover:brightness-75 transition cursor-pointer" alt="Work 1">
+            <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?auto=format&fit=crop&w=500&h=500" class="rounded-xl w-full h-64 object-cover hover:brightness-75 transition cursor-pointer" alt="Work 2">
+            <img src="https://images.unsplash.com/photo-1517646287270-a5a9ca602e5c?auto=format&fit=crop&w=500&h=500" class="rounded-xl w-full h-64 object-cover hover:brightness-75 transition cursor-pointer" alt="Work 3">
+            <img src="https://images.unsplash.com/photo-1631548233842-8246bc99e284?auto=format&fit=crop&w=500&h=500" class="rounded-xl w-full h-64 object-cover hover:brightness-75 transition cursor-pointer" alt="Work 4">
         </div>
-        <button class="mt-10 px-8 py-3 bg-blue-700 text-white font-bold rounded-md">See More Photos</button>
     </section>
 
-    <section id="contact" class="bg-slate-900 py-20 px-6 md:px-20 text-white">
-        <div class="flex flex-wrap md:flex-nowrap gap-12">
+    <section id="contact" class="bg-[#001f3f] py-24 px-6 md:px-20 text-white">
+        <div class="flex flex-wrap md:flex-nowrap gap-16">
             <div class="w-full md:w-1/2">
-                <h3 class="text-4xl font-bold mb-6">Hubungi Kami</h3>
-                <p class="text-gray-400 mb-8 text-lg">Butuh jasa service? Chat langsung lewat WhatsApp sekarang!</p>
+                <h3 class="text-5xl font-extrabold mb-8 text-white">Hubungi Kami</h3>
+                <p class="text-gray-400 mb-10 text-lg">Punya kendala barang elektronik? Jangan ditunda, chat kami sekarang untuk jadwalkan kunjungan!</p>
                 
-                <div class="space-y-4 mb-8">
-                    <div class="flex items-center gap-4">
-                        <i class="fa-solid fa-phone text-blue-500 text-xl"></i>
+                <div class="space-y-6 mb-10 text-lg">
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-phone text-cyan-400 mt-1"></i>
                         <span>0851-8818-8718 / 0851-8818-8728</span>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <i class="fa-solid fa-location-dot text-blue-500 text-xl"></i>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-location-dot text-cyan-400 mt-1"></i>
                         <span>Jl. Grand Purwodadi Residence, Semut Krajan, Semut, Kec. Purwodadi, Pasuruan, Jawa Timur 67163</span>
                     </div>
-                    <div class="flex items-center gap-4">
-                        <i class="fa-solid fa-envelope text-blue-500 text-xl"></i>
+                    <div class="flex items-start gap-4">
+                        <i class="fa-solid fa-envelope text-cyan-400 mt-1"></i>
                         <span>kingcryotech@gmail.com</span>
                     </div>
                 </div>
 
-                <a href="https://wa.me/6285188188718" class="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 px-6 py-4 rounded-md font-bold text-lg">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i> Chat WhatsApp Sekarang
+                <a href="https://wa.me/6285188188718" class="inline-flex items-center gap-3 bg-red-600 hover:bg-red-700 px-8 py-5 rounded-xl font-bold text-xl shadow-2xl transition transform hover:-translate-y-1">
+                    <i class="fa-brands fa-whatsapp text-3xl"></i> Chat WhatsApp Sekarang
                 </a>
             </div>
             
-            <div class="w-full md:w-1/2 h-[400px] rounded-xl overflow-hidden shadow-lg border-2 border-blue-900">
-    <iframe 
-        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7906.412588222846!2d112.77329349999997!3d-7.76793559999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sid!4v1772908496264!5m2!1sen!2sid" 
-        width="100%" 
-        height="100%" 
-        style="border:0;" 
-        allowfullscreen="" 
-        loading="lazy" 
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-</div>
+            <div class="w-full md:w-1/2 h-[450px] rounded-3xl overflow-hidden shadow-2xl border-4 border-slate-700Map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.5721869811!2d112.72120309999999!3d-7.7289899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7dc85af402b1f%3A0xcb13e512bb9b7c8c!2sJl.%20Grand%20Purwodadi%20Residence%2C%20Semut%2C%20Kec.%20Purwodadi%2C%20Pasuruan%2C%20Jawa%20Timur%2067163!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-black py-8 px-6 text-center text-gray-500 text-sm">
-        <p>&copy; 2026 CRYO Tech HVAC & Refrigeration Specialist. All rights reserved.</p>
+    <footer class="bg-black py-16 px-6 text-center text-gray-500 text-sm">
+        <div class="flex justify-center mb-6">
+            <img src="Cryo TEch logo2.png" alt="Logo CRYO Tech" class="h-16 w-auto opacity-70 hover:opacity-100 transition">
+        </div>
+        <p class="mb-2">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
+        <p class="text-xs uppercase tracking-widest text-gray-700">Pasuruan, Jawa Timur</p>
     </footer>
 
-    <a href="https://wa.me/6285188188718" class="fixed bottom-6 right-6 bg-green-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition z-[100]">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    <a href="https://wa.me/6285188188718" class="fixed bottom-8 right-8 bg-green-600 text-white p-5 rounded-full shadow-2xl hover:scale-110 hover:rotate-6 transition-all duration-300 z-[100] group">
+        <i class="fa-brands fa-whatsapp text-4xl"></i>
+        <span class="absolute right-full mr-4 bg-white text-black px-4 py-2 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition duration-300 shadow-md">Butuh Servis?</span>
     </a>
 
 </body>
