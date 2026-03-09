@@ -33,17 +33,29 @@
             transform: translateY(0);
         }
 
-        /* Styling Logo di Footer agar Terlihat Putih Bersih */
-        .footer-brand-img {
-            height: 24px;
-            width: auto;
-            filter: brightness(0) invert(1); /* Mengubah logo jadi putih total */
-            opacity: 0.4;
+        /* Styling Logo Brand di Footer */
+        .brand-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            opacity: 0.5;
             transition: all 0.3s ease;
         }
-        .footer-brand-img:hover {
+        .brand-item:hover {
             opacity: 1;
-            transform: scale(1.1);
+            transform: translateY(-5px);
+        }
+        .brand-item svg {
+            height: 25px;
+            fill: white; /* Semua logo jadi putih bersih */
+        }
+        .brand-name {
+            font-size: 10px;
+            font-weight: 700;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
     </style>
 </head>
@@ -314,18 +326,33 @@
         </div>
     </section>
 
-    <footer class="bg-black py-16 px-6 text-center text-gray-500 text-sm">
+    <footer class="bg-black py-16 px-6 text-center">
         
-        <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 mb-10">
-            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAUCAYAAAD99V9CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAW0lEQVRYhe3YMQ6AIAxG4f9SruMpjOOe7m6O6gA6MTGGEAnP9pS2pUOfm7YmEonpAAYAtAOYUvMv6X+oX7p0Gv7vK60WAD606Wq6f+rSdK6m/UOnS5dOwy9Y/3O+AYP3E0o+NOfOAAAAAElFTkSuQmCC" alt="Daikin">
-            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVRYhe3YsQ0AIBAEMbiU038pZ0GAs5WInYIn8iMAAADO86pG2f1Bv8ruD/pVdn/Qr7L7g36V3R/0q+z+oF9l9wf9Krs/6FfZ/UG/yu4P+lV2f9CvsnuvAB9oI9O20z4UAAAAAElFTkSuQmCC" alt="Samsung">
-            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVRYhe3YsQ0AIBAEMbiU038pZ0GAs5WInYIn8iMAAADO86pG2f1Bv8ruD/pVdn/Qr7L7g36V3R/0q+z+oF9l9wf9Krs/6FfZ/UG/yu4P+lV2f9CvsnuvAB9oI9O20z4UAAAAAElFTkSuQmCC" alt="LG">
-            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVRYhe3YsQ0AIBAEMbiU038pZ0GAs5WInYIn8iMAAADO86pG2f1Bv8ruD/pVdn/Qr7L7g36V3R/0q+z+oF9l9wf9Krs/6FfZ/UG/yu4P+lV2f9CvsnuvAB9oI9O20z4UAAAAAElFTkSuQmCC" alt="Panasonic">
-            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVRYhe3YsQ0AIBAEMbiU038pZ0GAs5WInYIn8iMAAADO86pG2f1Bv8ruD/pVdn/Qr7L7g36V3R/0q+z+oF9l9wf9Krs/6FfZ/UG/yu4P+lV2f9CvsnuvAB9oI9O20z4UAAAAAElFTkSuQmCC" alt="Gree">
+        <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12">
+            <div class="brand-item">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.905 13.065c0 2.336-5.328 4.23-11.9 4.23S.105 15.401.105 13.065s5.328-4.23 11.9-4.23 11.9 1.894 11.9 4.23zM7.34 13.916c-.347-.19-.533-.383-.533-.566 0-.308.513-.578 1.488-.737.524-.084 1.156-.128 1.828-.133l.034.417c-.595.006-1.15.038-1.597.086-.682.072-1.01.178-1.01.3 0 .044.062.096.223.167l-.433.466zm3.32-.423c-.563 0-.91-.122-.91-.32 0-.168.258-.29.74-.366.39-.062.89-.095 1.417-.101l.03.421c-.482.006-.928.033-1.267.07-.312.034-.44.08-.44.135 0 .04.095.083.336.12l-.025.43c-.49-.1-.88-.22-.88-.39zm2.46-.38c0 .245-.58.423-1.517.423-.42 0-.814-.035-1.135-.098l-.134.425c.343.085.787.13 1.27.13.564 0 1.034-.06 1.343-.166.452-.153.69-.355.69-.58 0-.173-.133-.323-.412-.444l-.265.412c.1.053.16.126.16.198zm2.636-.583c-.974.159-1.487.43-1.487.737 0 .183.186.376.533.566l.432-.466c-.16-.07-.222-.123-.222-.167 0-.12.33-.227 1.01-.3.447-.048 1.002-.08 1.596-.086l-.034-.417c-.672.005-1.304.049-1.828.133z"/></svg>
+                <span class="brand-name">Samsung</span>
+            </div>
+            <div class="brand-item">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 21.818c-5.414 0-9.818-4.404-9.818-9.818S6.586 2.182 12 2.182 21.818 6.586 21.818 12 17.414 21.818 12 21.818zM8.182 6.545h1.636V12h3.818v1.636H8.182V6.545zM15.818 12c0 1.206-.976 2.182-2.182 2.182s-2.182-.976-2.182-2.182.976-2.182 2.182-2.182c.603 0 1.15.244 1.543.638l1.156-1.156c-.691-.691-1.646-1.118-2.7-1.118-2.11 0-3.818 1.708-3.818 3.818s1.708 3.818 3.818 3.818c2.11 0 3.818-1.708 3.818-3.818h-1.636z"/></svg>
+                <span class="brand-name">LG</span>
+            </div>
+            <div class="brand-item">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 8.571h3.429v1.714h1.714V8.571h3.429v6.857h-1.714v-1.714H5.143v1.714H3.429V13.714H1.714v1.714H0V8.571zm10.286 0h3.429v1.714h1.714V8.571h3.429v6.857h-1.714v-1.714h-1.714v1.714h-3.429V8.571zm1.714 1.714v3.429h1.714v-3.429h-1.714zm10.286-1.714h1.714v6.857h-1.714V8.571z"/></svg>
+                <span class="brand-name">Panasonic</span>
+            </div>
+            <div class="brand-item">
+                <i class="fa-solid fa-wind text-white text-2xl mb-1"></i>
+                <span class="brand-name">Daikin</span>
+            </div>
+            <div class="brand-item">
+                <i class="fa-solid fa-snowflake text-white text-2xl mb-1"></i>
+                <span class="brand-name">Gree</span>
+            </div>
         </div>
 
         <div class="flex justify-center mb-6"><img src="Cryo TEch logo2.png" alt="Logo" class="h-16 w-auto opacity-70"></div>
-        <p class="mb-2 uppercase tracking-widest">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
+        <p class="mb-2 uppercase tracking-widest text-gray-500 text-sm">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
         <p class="text-xs text-gray-700">Pasuruan, Jawa Timur</p>
     </footer>
 
@@ -350,17 +377,6 @@
             const icon = menuBtn.querySelector('i');
             icon.classList.toggle('fa-bars');
             icon.classList.toggle('fa-xmark');
-        });
-
-        // Close menu on link click
-        document.querySelectorAll('#menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 1024) {
-                    menu.classList.add('hidden');
-                    menuBtn.querySelector('i').classList.add('fa-bars');
-                    menuBtn.querySelector('i').classList.remove('fa-xmark');
-                }
-            });
         });
     </script>
 </body>
