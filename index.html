@@ -33,14 +33,14 @@
             transform: translateY(0);
         }
 
-        /* Efek Hover Logo Brand */
-        .brand-logo {
-            filter: grayscale(100%);
-            opacity: 0.5;
+        /* Efek Logo di Footer Gelap */
+        .brand-logo-footer {
+            filter: grayscale(100%) brightness(200%); /* Membuat logo putih bersih di bg hitam */
+            opacity: 0.4;
             transition: all 0.4s ease;
         }
-        .brand-logo:hover {
-            filter: grayscale(0%);
+        .brand-logo-footer:hover {
+            filter: grayscale(0%) brightness(100%); /* Warna asli saat hover */
             opacity: 1;
             transform: scale(1.1);
         }
@@ -95,19 +95,6 @@
             </a>
         </div>
     </header>
-
-    <section class="py-12 bg-white border-b border-gray-100">
-        <div class="container mx-auto px-6 md:px-20">
-            <p class="text-center text-xs font-bold text-gray-400 uppercase tracking-widest mb-8">Merek yang Kami Tangani</p>
-            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-20">
-                <img src="https://logo.clearbit.com/daikin.com" alt="Daikin" class="brand-logo h-8 md:h-12 object-contain">
-                <img src="https://logo.clearbit.com/samsung.com" alt="Samsung" class="brand-logo h-8 md:h-12 object-contain">
-                <img src="https://logo.clearbit.com/gree.com" alt="Gree" class="brand-logo h-8 md:h-12 object-contain">
-                <img src="https://logo.clearbit.com/lg.com" alt="LG" class="brand-logo h-8 md:h-12 object-contain">
-                <img src="https://logo.clearbit.com/panasonic.com" alt="Panasonic" class="brand-logo h-8 md:h-12 object-contain">
-            </div>
-        </div>
-    </section>
 
     <section id="services" class="py-24 px-6 md:px-20 bg-white">
         <div class="text-center mb-16">
@@ -327,6 +314,14 @@
     </section>
 
     <footer class="bg-black py-16 px-6 text-center text-gray-500 text-sm">
+        <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 mb-10">
+            <img src="https://logo.clearbit.com/daikin.com" alt="Daikin" class="brand-logo-footer h-6 md:h-8 object-contain">
+            <img src="https://logo.clearbit.com/samsung.com" alt="Samsung" class="brand-logo-footer h-6 md:h-8 object-contain">
+            <img src="https://logo.clearbit.com/gree.com" alt="Gree" class="brand-logo-footer h-6 md:h-8 object-contain">
+            <img src="https://logo.clearbit.com/lg.com" alt="LG" class="brand-logo-footer h-6 md:h-8 object-contain">
+            <img src="https://logo.clearbit.com/panasonic.com" alt="Panasonic" class="brand-logo-footer h-6 md:h-8 object-contain">
+        </div>
+
         <div class="flex justify-center mb-6"><img src="Cryo TEch logo2.png" alt="Logo" class="h-16 w-auto opacity-70"></div>
         <p class="mb-2 uppercase tracking-widest">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
         <p class="text-xs text-gray-700">Pasuruan, Jawa Timur</p>
