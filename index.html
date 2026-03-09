@@ -33,14 +33,15 @@
             transform: translateY(0);
         }
 
-        /* Efek Logo di Footer Gelap */
-        .brand-logo-footer {
-            filter: grayscale(100%) brightness(200%); /* Membuat logo putih bersih di bg hitam */
+        /* Styling Logo di Footer agar Terlihat Putih Bersih */
+        .footer-brand-img {
+            height: 24px;
+            width: auto;
+            filter: brightness(0) invert(1); /* Mengubah logo jadi putih total */
             opacity: 0.4;
-            transition: all 0.4s ease;
+            transition: all 0.3s ease;
         }
-        .brand-logo-footer:hover {
-            filter: grayscale(0%) brightness(100%); /* Warna asli saat hover */
+        .footer-brand-img:hover {
             opacity: 1;
             transform: scale(1.1);
         }
@@ -314,12 +315,13 @@
     </section>
 
     <footer class="bg-black py-16 px-6 text-center text-gray-500 text-sm">
-        <div class="flex flex-wrap justify-center items-center gap-6 md:gap-12 mb-10">
-            <img src="https://logo.clearbit.com/daikin.com" alt="Daikin" class="brand-logo-footer h-6 md:h-8 object-contain">
-            <img src="https://logo.clearbit.com/samsung.com" alt="Samsung" class="brand-logo-footer h-6 md:h-8 object-contain">
-            <img src="https://logo.clearbit.com/gree.com" alt="Gree" class="brand-logo-footer h-6 md:h-8 object-contain">
-            <img src="https://logo.clearbit.com/lg.com" alt="LG" class="brand-logo-footer h-6 md:h-8 object-contain">
-            <img src="https://logo.clearbit.com/panasonic.com" alt="Panasonic" class="brand-logo-footer h-6 md:h-8 object-contain">
+        
+        <div class="flex flex-wrap justify-center items-center gap-6 md:gap-10 mb-10">
+            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFQAAAAUCAYAAAD99V9CAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAW0lEQVRYhe3YMQ6AIAxG4f9SruMpjOOe7m6O6gA6MTGGEAnP9pS2pUOfm7YmEonpAAYAtAOYUvMv6X+oX7p0Gv7vK60WAD606Wq6f+rSdK6m/UOnS5dOwy9Y/3O+AYP3E0o+NOfOAAAAAElFTkSuQmCC" alt="Daikin">
+            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVRYhe3YsQ0AIBAEMbiU038pZ0GAs5WInYIn8iMAAADO86pG2f1Bv8ruD/pVdn/Qr7L7g36V3R/0q+z+oF9l9wf9Krs/6FfZ/UG/yu4P+lV2f9CvsnuvAB9oI9O20z4UAAAAAElFTkSuQmCC" alt="Samsung">
+            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVRYhe3YsQ0AIBAEMbiU038pZ0GAs5WInYIn8iMAAADO86pG2f1Bv8ruD/pVdn/Qr7L7g36V3R/0q+z+oF9l9wf9Krs/6FfZ/UG/yu4P+lV2f9CvsnuvAB9oI9O20z4UAAAAAElFTkSuQmCC" alt="LG">
+            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVRYhe3YsQ0AIBAEMbiU038pZ0GAs5WInYIn8iMAAADO86pG2f1Bv8ruD/pVdn/Qr7L7g36V3R/0q+z+oF9l9wf9Krs/6FfZ/UG/yu4P+lV2f9CvsnuvAB9oI9O20z4UAAAAAElFTkSuQmCC" alt="Panasonic">
+            <img class="footer-brand-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAV0lEQVRYhe3YsQ0AIBAEMbiU038pZ0GAs5WInYIn8iMAAADO86pG2f1Bv8ruD/pVdn/Qr7L7g36V3R/0q+z+oF9l9wf9Krs/6FfZ/UG/yu4P+lV2f9CvsnuvAB9oI9O20z4UAAAAAElFTkSuQmCC" alt="Gree">
         </div>
 
         <div class="flex justify-center mb-6"><img src="Cryo TEch logo2.png" alt="Logo" class="h-16 w-auto opacity-70"></div>
