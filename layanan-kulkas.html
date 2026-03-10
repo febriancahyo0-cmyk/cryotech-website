@@ -33,36 +33,38 @@
 </head>
 <body class="bg-gray-50 text-slate-900">
 
-    <nav class="bg-[#001f3f] text-white py-3 px-6 md:px-20 flex justify-between items-center sticky top-0 z-50 shadow-lg">
+    <nav class="bg-[#001f3f] text-white py-3 sticky top-0 z-50 shadow-lg w-full overflow-x-clip">
+    <div class="max-w-7xl mx-auto px-6 md:px-20 flex justify-between items-center relative">
+        
         <div class="flex items-center gap-3">
             <img src="Cryo TEch logo2.png" alt="Logo CRYO Tech" class="h-10 w-auto">
             <span class="font-bold tracking-tight uppercase">CRYO TECH</span>
         </div>
 
-        <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none order-3">
+        <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none z-50">
             <i class="fa-solid fa-bars"></i>
         </button>
-        
-        <ul id="menu" class="hidden lg:flex flex-col lg:flex-row absolute lg:static top-full left-0 w-full lg:w-auto bg-[#001f3f] lg:bg-transparent p-6 lg:p-0 gap-6 lg:gap-8 text-sm font-medium uppercase tracking-wide shadow-xl lg:shadow-none z-50 transition-all duration-300">
-            <li><a href="index.html" class="hover:text-red-500 transition block">Home</a></li>
-            <li><a href="index.html#services" class="hover:text-red-500 transition block">Services</a></li>
-            <li><a href="about.html" class="hover:text-red-500 transition block">Tentang Kami</a></li>
+
+        <ul id="menu" class="hidden lg:flex flex-col lg:flex-row absolute lg:static top-full left-0 w-full lg:w-auto bg-[#001f3f] lg:bg-transparent p-6 lg:p-0 gap-6 lg:gap-8 text-sm font-medium uppercase tracking-wide shadow-xl lg:shadow-none transition-all duration-300">
+            <li><a href="index.html" class="hover:text-red-600 transition block py-2">Home</a></li>
+            <li><a href="index.html#services" class="hover:text-red-600 transition block py-2">Services</a></li>
+            <li><a href="about.html" class="text-red-500 font-bold block py-2">Tentang Kami</a></li>
             
             <li class="relative group">
-                <button class="text-red-500 flex items-center gap-1 focus:outline-none uppercase font-bold">
+                <button class="hover:text-red-600 transition flex items-center justify-between w-full lg:w-auto gap-1 focus:outline-none uppercase py-2">
                     Harga <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
                 </button>
                 <div class="lg:absolute left-0 mt-2 w-full lg:w-64 bg-white text-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible dropdown-animate border border-gray-100 overflow-hidden z-[100]">
-                    <a href="layanan-ac.html" class="block px-5 py-4 hover:bg-red-50 hover:text-red-600 border-b border-gray-50 transition">Layanan AC</a>
-                    <a href="layanan-kulkas.html" class="block px-5 py-4 bg-red-50 text-red-600 border-b border-gray-50 font-bold transition">Kulkas & Freezer</a>
-                    <a href="layanan-mesincuci.html" class="block px-5 py-4 hover:bg-red-50 hover:text-red-600 transition">Mesin Cuci</a>
+                    <a href="layanan-ac.html" class="block px-5 py-4 hover:bg-red-50 hover:text-red-600 border-b border-gray-50 transition text-xs">Layanan AC</a>
+                    <a href="layanan-kulkas.html" class="block px-5 py-4 hover:bg-red-50 hover:text-red-600 border-b border-gray-50 transition text-xs">Kulkas & Freezer</a>
+                    <a href="layanan-mesincuci.html" class="block px-5 py-4 hover:bg-red-50 hover:text-red-600 transition text-xs">Mesin Cuci</a>
                 </div>
             </li>
-            <li><a href="index.html#contact" class="hover:text-red-500 transition block">Contact</a></li>
+            <li><a href="index.html#contact" class="hover:text-red-600 transition block py-2">Contact</a></li>
         </ul>
 
-        
-    </nav>
+    </div>
+</nav>
 
     <header class="bg-[#001f3f] py-16 px-6 text-center text-white border-t border-slate-800">
         <h1 class="text-3xl md:text-5xl font-extrabold mb-4 uppercase tracking-tight">Price List Kulkas & Freezer</h1>
