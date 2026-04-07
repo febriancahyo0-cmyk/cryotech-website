@@ -55,7 +55,7 @@
             z-index: 10;
         }
 
-        /* EFEK NAVIGASI HOVER */
+        /* EFEK NAVIGASI HOVER (Muncul saat kursor masuk) */
         .swiper-button-next, .swiper-button-prev { 
             color: white !important; 
             background: rgba(0, 0, 0, 0.4);
@@ -64,7 +64,7 @@
             border-radius: 50%;
             transition: all 0.3s ease-in-out;
             z-index: 20;
-            opacity: 0;
+            opacity: 0; 
         }
         
         .swiper-button-next { transform: translateX(20px); }
@@ -129,11 +129,7 @@
             <div class="w-full lg:w-3/5 space-y-6">
                 <div class="swiper mySwiper shadow-2xl border-4 border-white">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <a href="Split%20AC/split%20(1).jpg" data-fancybox="gallery">
-                                <img src="Split%20AC/split%20(1).jpg" alt="Instalasi AC 1">
-                            </a>
-                        </div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(1).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(1).jpg" alt="Instalasi AC 1"></a></div>
                         <div class="swiper-slide"><a href="Split%20AC/split%20(2).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(2).jpg" alt="Instalasi AC 2"></a></div>
                         <div class="swiper-slide"><a href="Split%20AC/split%20(3).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(3).jpg" alt="Instalasi AC 3"></a></div>
                         <div class="swiper-slide"><a href="Split%20AC/split%20(4).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(4).jpg" alt="Instalasi AC 4"></a></div>
@@ -155,40 +151,34 @@
                 </div>
 
                 <div class="grid grid-cols-5 gap-3 mt-6">
-    <a href="Split%20AC/split%20(1).jpg" data-fancybox="gallery">
-        <img src="Split%20AC/split%20(1).jpg" class="rounded-2xl aspect-square object-cover hover:scale-105 transition duration-300 border border-gray-200 shadow-sm">
-    </a>
-    <a href="Split%20AC/split%20(2).jpg" data-fancybox="gallery">
-        <img src="Split%20AC/split%20(2).jpg" class="rounded-2xl aspect-square object-cover hover:scale-105 transition duration-300 border border-gray-200 shadow-sm">
-    </a>
-    <a href="Split%20AC/split%20(3).jpg" data-fancybox="gallery">
-        <img src="Split%20AC/split%20(3).jpg" class="rounded-2xl aspect-square object-cover hover:scale-105 transition duration-300 border border-gray-200 shadow-sm">
-    </a>
-    <a href="Split%20AC/split%20(4).jpg" data-fancybox="gallery">
-        <img src="Split%20AC/split%20(4).jpg" class="rounded-2xl aspect-square object-cover hover:scale-105 transition duration-300 border border-gray-200 shadow-sm">
-    </a>
+                    <a href="Split%20AC/split%20(1).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(1).jpg" class="rounded-2xl aspect-square object-cover hover:scale-105 transition duration-300 border border-gray-200 shadow-sm"></a>
+                    <a href="Split%20AC/split%20(2).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(2).jpg" class="rounded-2xl aspect-square object-cover hover:scale-105 transition duration-300 border border-gray-200 shadow-sm"></a>
+                    <a href="Split%20AC/split%20(3).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(3).jpg" class="rounded-2xl aspect-square object-cover hover:scale-105 transition duration-300 border border-gray-200 shadow-sm"></a>
+                    <a href="Split%20AC/split%20(4).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(4).jpg" class="rounded-2xl aspect-square object-cover hover:scale-105 transition duration-300 border border-gray-200 shadow-sm"></a>
+                    
+                    <a href="Split%20AC/split%20(5).jpg" data-fancybox="gallery" class="relative group overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
+                        <img src="Split%20AC/split%20(5).jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white transition group-hover:bg-black/70">
+                            <span class="text-xl font-bold">+11</span>
+                            <span class="text-[10px] uppercase tracking-tighter font-medium">Lainnya</span>
+                        </div>
+                    </a>
 
-    <a href="Split%20AC/split%20(5).jpg" data-fancybox="gallery" class="relative group overflow-hidden rounded-2xl border border-gray-200 shadow-sm">
-        <img src="Split%20AC/split%20(5).jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition duration-500">
-        <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white transition group-hover:bg-black/70">
-            <span class="text-xl font-bold">+11</span>
-            <span class="text-[10px] uppercase tracking-tighter font-medium">Lainnya</span>
-        </div>
-    </a>
+                    <div class="hidden">
+                        <a href="Split%20AC/split%20(6).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(7).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(8).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(9).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(10).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(11).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(12).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(13).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(14).jpg" data-fancybox="gallery"></a>
+                        <a href="Split%20AC/split%20(15).jpg" data-fancybox="gallery"></a>
+                    </div>
+                </div>
+            </div>
 
-    <div class="hidden">
-        <a href="Split%20AC/split%20(6).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(7).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(8).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(9).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(10).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(11).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(12).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(13).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(14).jpg" data-fancybox="gallery"></a>
-        <a href="Split%20AC/split%20(15).jpg" data-fancybox="gallery"></a>
-    </div>
-</div>
             <div class="w-full lg:w-2/5">
                 <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100 sticky top-28">
                     <p class="text-red-600 font-bold tracking-widest uppercase mb-3 text-sm">Project Highlight</p>
@@ -218,14 +208,13 @@
     <footer class="bg-black py-16 px-6 md:px-20 border-t border-gray-900 text-center">
         <img src="Cryo TEch logo2.png" alt="Logo" class="h-10 mx-auto opacity-70 mb-4">
         <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
-        <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest">Pasuruan, Jawa Timur</p>
+        <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest font-medium text-center">Pasuruan, Jawa Timur</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
     <script>
-        // Inisialisasi Swiper
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             speed: 1000,
@@ -236,15 +225,12 @@
             fadeEffect: { crossFade: true }
         });
 
-        // Inisialisasi Fancybox (Popup)
         Fancybox.bind("[data-fancybox='gallery']", {
             compact: false,
             idle: false,
-            dragToClose: false,
-            Toolbar: { display: { left: ["infobar"], middle: [], right: ["iterateZoom", "close"] } }
+            dragToClose: false
         });
 
-        // Toggle Menu Mobile
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
         menuBtn.addEventListener('click', () => {
