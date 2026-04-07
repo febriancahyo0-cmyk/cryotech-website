@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek VRV/VRF & AC Central | CRYO Tech Pasuruan</title>
+    <link rel="icon" type="image/png" href="Cryo%20TEch%20logo2.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500&display=swap');
+        body { font-family: 'Roboto', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, h4, .brand-font { font-family: 'Montserrat', sans-serif; }
+        
+        .swiper { width: 100%; border-radius: 1.5rem; position: relative; overflow: hidden; }
+        .swiper-slide img { width: 100%; height: 550px; object-fit: cover; object-position: center; cursor: zoom-in; }
+
+        /* Watermark */
+        .swiper-slide { position: relative; }
+        .swiper-slide::after {
+            content: "CRYO Tech Pasuruan";
+            position: absolute; bottom: 25px; right: 25px;
+            color: rgba(255, 255, 255, 0.6); font-family: 'Montserrat', sans-serif;
+            font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;
+            background: rgba(0, 0, 0, 0.3); padding: 6px 12px; border-radius: 4px; pointer-events: none; z-index: 10;
+        }
+
+        /* Hover Navigation */
+        .swiper-button-next, .swiper-button-prev { 
+            color: white !important; background: rgba(0, 0, 0, 0.4);
+            width: 45px !important; height: 45px !important; border-radius: 50%;
+            transition: all 0.3s ease-in-out; z-index: 20; opacity: 0; 
+        }
+        .swiper:hover .swiper-button-next, .swiper:hover .swiper-button-prev { opacity: 1; transform: translateX(0); }
+        .swiper-button-next { transform: translateX(20px); } .swiper-button-prev { transform: translateX(-20px); }
+        .swiper-pagination-bullet-active { background: #dc2626 !important; }
+
+        @media (max-width: 768px) { .swiper-slide img { height: 350px; } .swiper-button-next, .swiper-button-prev { display: none; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-slate-900">
+
+    <nav class="bg-[#001f3f] text-white py-3 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-full mx-auto px-6 md:px-10 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <img src="Cryo%20TEch%20logo2.png" alt="Logo" class="h-10 w-auto">
+                <span class="font-bold uppercase tracking-tight">CRYO TECH</span>
+            </div>
+            <ul class="hidden lg:flex gap-8 text-sm font-medium uppercase">
+                <li><a href="index.html" class="hover:text-red-600 transition">Home</a></li>
+                <li><a href="gallery.html" class="text-red-600 transition font-bold">Gallery</a></li>
+                <li><a href="index.html#contact" class="hover:text-red-600 transition">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="py-16 px-6 md:px-20 max-w-7xl mx-auto">
+        <a href="gallery.html" class="inline-flex items-center gap-2 text-red-600 font-bold mb-10 hover:gap-4 transition-all uppercase text-sm">
+            <i class="fa-solid fa-arrow-left"></i> KEMBALI KE GALERI
+        </a>
+
+        <div class="flex flex-wrap lg:flex-nowrap gap-12 mb-20">
+            <div class="w-full lg:w-3/5 space-y-6">
+                <div class="swiper mySwiper shadow-2xl border-4 border-white">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="Vrv/VRV%20(1).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(1).jpg" alt="Proyek VRV 1"></a></div>
+                        <div class="swiper-slide"><a href="Vrv/VRV%20(2).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(2).jpg" alt="Proyek VRV 2"></a></div>
+                        <div class="swiper-slide"><a href="Vrv/VRV%20(3).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(3).jpg" alt="Proyek VRV 3"></a></div>
+                        <div class="swiper-slide"><a href="Vrv/VRV%20(4).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(4).jpg" alt="Proyek VRV 4"></a></div>
+                        <div class="swiper-slide"><a href="Vrv/VRV%20(5).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(5).jpg" alt="Proyek VRV 5"></a></div>
+                        <div class="swiper-slide"><a href="Vrv/VRV%20(6).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(6).jpg" alt="Proyek VRV 6"></a></div>
+                        <div class="swiper-slide"><a href="Vrv/VRV%20(7).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(7).jpg" alt="Proyek VRV 7"></a></div>
+                        <div class="swiper-slide"><a href="Vrv/VRV%20(8).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(8).jpg" alt="Proyek VRV 8"></a></div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+                <div class="grid grid-cols-4 gap-3 mt-6">
+                    <a href="Vrv/VRV%20(1).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(1).jpg" class="rounded-2xl aspect-square object-cover border border-gray-200 hover:scale-105 transition"></a>
+                    <a href="Vrv/VRV%20(2).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(2).jpg" class="rounded-2xl aspect-square object-cover border border-gray-200 hover:scale-105 transition"></a>
+                    <a href="Vrv/VRV%20(3).jpg" data-fancybox="gallery"><img src="Vrv/VRV%20(3).jpg" class="rounded-2xl aspect-square object-cover border border-gray-200 hover:scale-105 transition"></a>
+                    <a href="Vrv/VRV%20(4).jpg" data-fancybox="gallery" class="relative group overflow-hidden rounded-2xl border border-gray-200">
+                        <img src="Vrv/VRV%20(4).jpg" class="w-full aspect-square object-cover group-hover:scale-110 transition">
+                        <div class="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-white">
+                            <span class="text-xl font-bold">+4</span>
+                            <span class="text-[10px] uppercase">Lainnya</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="w-full lg:w-2/5">
+                <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100 sticky top-28">
+                    <p class="text-red-600 font-bold tracking-widest uppercase mb-3 text-sm">Large Scale System</p>
+                    <h1 class="text-3xl md:text-4xl font-extrabold text-[#001f3f] mb-6 leading-tight uppercase">VRV/VRF & AC Central</h1>
+                    
+                    <div class="space-y-6 text-gray-600 leading-relaxed text-sm">
+                        <div class="flex gap-4">
+                            <i class="fa-solid fa-microchip text-blue-500 mt-1"></i>
+                            <p><strong>Advanced Technology:</strong> Satu unit outdoor melayani banyak indoor dengan kontrol suhu independen.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fa-solid fa-leaf text-green-500 mt-1"></i>
+                            <p><strong>Energy Efficiency:</strong> Teknologi Inverter tingkat tinggi yang sangat menghemat biaya operasional listrik.</p>
+                        </div>
+                        <div class="flex gap-4">
+                            <i class="fa-solid fa-screwdriver-wrench text-orange-500 mt-1"></i>
+                            <p><strong>Complex Piping:</strong> Instalasi pemipaan refrigerant khusus yang rapi dan teruji *pressure test* standar tinggi.</p>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/6285188188718" class="mt-10 w-full flex justify-center items-center gap-3 bg-red-600 hover:bg-red-700 text-white py-5 rounded-2xl font-bold shadow-xl transition transform hover:-translate-y-1 uppercase tracking-widest text-sm">
+                        <i class="fa-brands fa-whatsapp text-2xl"></i> HUBUNGI SPESIALIS VRV
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-black py-10 text-center text-gray-500 text-xs">
+        <p>© 2026 CRYO Tech HVAC & Refrigeration Specialist. Pasuruan.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true, speed: 1000, autoplay: { delay: 4000 },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            pagination: { el: ".swiper-pagination", clickable: true },
+            effect: "fade", fadeEffect: { crossFade: true }
+        });
+        Fancybox.bind("[data-fancybox='gallery']", { compact: false });
+    </script>
+</body>
+</html>
