@@ -24,9 +24,22 @@
             transform: translateY(0);
         }
 
-        /* Swiper Custom Styling */
-        .swiper { width: 100%; height: auto; }
+        /* Swiper Custom Styling - MEMASTIKAN GAMBAR PENUH & SERAGAM */
+        .swiper { width: 100%; border-radius: 1.5rem; }
+        .swiper-slide img { 
+            width: 100%; 
+            height: 550px; /* Tinggi seragam di Desktop */
+            object-fit: cover; /* Gambar memenuhi area tanpa gepeng */
+            object-position: center; 
+        }
         .swiper-pagination-bullet-active { background: #dc2626 !important; }
+
+        /* Penyesuaian Tinggi di HP */
+        @media (max-width: 768px) {
+            .swiper-slide img {
+                height: 350px;
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-50 text-slate-900">
@@ -68,35 +81,35 @@
             <i class="fa-solid fa-arrow-left"></i> Kembali ke Galeri
         </a>
 
-        <div class="flex flex-wrap lg:flex-nowrap gap-12 mb-20">
+        <div class="flex flex-wrap lg:flex-nowrap gap-12">
             <div class="w-full lg:w-3/5 space-y-6">
-                <div class="swiper mySwiper rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+                <div class="swiper mySwiper shadow-2xl border-4 border-white">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(1).jpg" class="w-full h-auto object-cover" alt="Instalasi 1"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(2).jpg" class="w-full h-auto object-cover" alt="Instalasi 2"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(3).jpg" class="w-full h-auto object-cover" alt="Instalasi 3"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(4).jpg" class="w-full h-auto object-cover" alt="Instalasi 4"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(5).jpg" class="w-full h-auto object-cover" alt="Instalasi 5"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(1).jpg" alt="Dokumentasi Instalasi 1"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(2).jpg" alt="Dokumentasi Instalasi 2"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(3).jpg" alt="Dokumentasi Instalasi 3"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(4).jpg" alt="Dokumentasi Instalasi 4"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(5).jpg" alt="Dokumentasi Instalasi 5"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(6).jpg" alt="Dokumentasi Instalasi 6"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(7).jpg" alt="Dokumentasi Instalasi 7"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(8).jpg" alt="Dokumentasi Instalasi 8"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(9).jpg" alt="Dokumentasi Instalasi 9"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(10).jpg" alt="Dokumentasi Instalasi 10"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(11).jpg" alt="Dokumentasi Instalasi 11"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(12).jpg" alt="Dokumentasi Instalasi 12"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(13).jpg" alt="Dokumentasi Instalasi 13"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(14).jpg" alt="Dokumentasi Instalasi 14"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(15).jpg" alt="Dokumentasi Instalasi 15"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
 
-                <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3">
-                    <img src="Split%20AC/split%20(1).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(2).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(3).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(4).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(5).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(6).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(7).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(8).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(9).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(10).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(11).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(12).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(13).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(14).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
-                    <img src="Split%20AC/split%20(15).jpg" class="rounded-xl shadow-sm hover:scale-105 transition duration-300 aspect-square object-cover border border-gray-100">
+                <div class="grid grid-cols-5 gap-2">
+                    <img src="Split%20AC/split%20(1).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
+                    <img src="Split%20AC/split%20(2).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
+                    <img src="Split%20AC/split%20(3).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
+                    <img src="Split%20AC/split%20(4).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
+                    <img src="Split%20AC/split%20(5).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
                 </div>
             </div>
 
@@ -129,45 +142,10 @@
     </main>
 
     <footer class="bg-black py-16 px-6 md:px-20 border-t border-gray-900 overflow-hidden">
-        <div class="max-w-full mx-auto">
-            <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-y-12">
-                <div class="flex justify-center md:justify-start">
-                    <div class="grid grid-cols-3 gap-x-4 gap-y-4 items-center w-fit">
-                        <div class="bg-white w-24 h-16 md:w-32 md:h-20 rounded-2xl p-3 shadow-lg flex items-center justify-center">
-                            <img src="images/daikin.png" alt="Daikin" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <div class="bg-white w-24 h-16 md:w-32 md:h-20 rounded-2xl p-3 shadow-lg flex items-center justify-center">
-                            <img src="images/samsung.png" alt="Samsung" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <div class="bg-white w-24 h-16 md:w-32 md:h-20 rounded-2xl p-3 shadow-lg flex items-center justify-center">
-                            <img src="images/lg.png" alt="LG" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <div class="bg-white w-24 h-16 md:w-32 md:h-20 rounded-2xl p-3 shadow-lg flex items-center justify-center">
-                            <img src="images/panasonic.png" alt="Panasonic" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <div class="bg-white w-24 h-16 md:w-32 md:h-20 rounded-2xl p-3 shadow-lg flex items-center justify-center">
-                            <img src="images/gree.png" alt="Gree" class="max-h-full max-w-full object-contain">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex flex-col items-center text-center order-last md:order-none md:pt-20">
-                    <img src="Cryo TEch logo2.png" alt="Logo" class="h-14 md:h-16 w-auto opacity-80 mb-4">
-                    <div class="px-2">
-                        <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold leading-tight">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
-                        <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest">Pasuruan, Jawa Timur</p>
-                    </div>
-                </div>
-
-                <div class="flex justify-center md:justify-end">
-                    <div class="group flex flex-col items-center gap-3">
-                        <div class="flex items-center justify-center w-32 h-24 md:w-44 md:h-28 rounded-2xl bg-white shadow-xl p-5 border-b-4 border-red-600">
-                            <img src="images/bnsp.png" alt="Logo BNSP" class="max-h-full max-w-full object-contain">
-                        </div>
-                        <span class="text-[10px] text-gray-500 font-bold uppercase tracking-widest">Level 3 Certificate</span>
-                    </div>
-                </div>
-            </div>
+        <div class="max-w-full mx-auto text-center">
+            <img src="Cryo TEch logo2.png" alt="Logo" class="h-14 mx-auto opacity-80 mb-4">
+            <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold leading-tight">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
+            <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest">Pasuruan, Jawa Timur</p>
         </div>
     </footer>
 
@@ -177,6 +155,7 @@
         // Inisialisasi Slider Otomatis
         var swiper = new Swiper(".mySwiper", {
             loop: true,
+            speed: 800,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
@@ -185,6 +164,8 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
+            effect: "fade", // Efek transisi halus
+            fadeEffect: { crossFade: true }
         });
 
         // Toggle Menu Mobile
