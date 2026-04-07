@@ -24,21 +24,44 @@
             transform: translateY(0);
         }
 
-        /* Swiper Custom Styling - MEMASTIKAN GAMBAR PENUH & SERAGAM */
-        .swiper { width: 100%; border-radius: 1.5rem; }
+        /* Swiper Custom Styling */
+        .swiper { width: 100%; border-radius: 1.5rem; position: relative; }
+        
+        /* Memastikan gambar penuh dan seragam */
         .swiper-slide img { 
             width: 100%; 
-            height: 550px; /* Tinggi seragam di Desktop */
-            object-fit: cover; /* Gambar memenuhi area tanpa gepeng */
+            height: 550px; 
+            object-fit: cover; 
             object-position: center; 
         }
+
+        /* Watermark CSS */
+        .swiper-slide { position: relative; }
+        .swiper-slide::after {
+            content: "CRYO Tech Pasuruan";
+            position: absolute;
+            bottom: 25px;
+            right: 25px;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 6px 12px;
+            border-radius: 4px;
+            pointer-events: none;
+            z-index: 10;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
         .swiper-pagination-bullet-active { background: #dc2626 !important; }
 
-        /* Penyesuaian Tinggi di HP */
+        /* Mobile View Height Adjustment */
         @media (max-width: 768px) {
-            .swiper-slide img {
-                height: 350px;
-            }
+            .swiper-slide img { height: 350px; }
+            .swiper-slide::after { font-size: 10px; bottom: 15px; right: 15px; }
         }
     </style>
 </head>
@@ -77,7 +100,7 @@
     </nav>
 
     <main class="py-16 px-6 md:px-20 max-w-7xl mx-auto">
-        <a href="gallery.html" class="inline-flex items-center gap-2 text-red-600 font-bold mb-10 hover:gap-4 transition-all uppercase tracking-wider text-sm">
+        <a href="gallery.html" class="inline-flex items-center gap-2 text-red-600 font-bold mb-10 hover:gap-4 transition-all uppercase tracking-wider text-sm text-shadow-sm">
             <i class="fa-solid fa-arrow-left"></i> Kembali ke Galeri
         </a>
 
@@ -85,21 +108,21 @@
             <div class="w-full lg:w-3/5 space-y-6">
                 <div class="swiper mySwiper shadow-2xl border-4 border-white">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(1).jpg" alt="Dokumentasi Instalasi 1"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(2).jpg" alt="Dokumentasi Instalasi 2"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(3).jpg" alt="Dokumentasi Instalasi 3"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(4).jpg" alt="Dokumentasi Instalasi 4"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(5).jpg" alt="Dokumentasi Instalasi 5"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(6).jpg" alt="Dokumentasi Instalasi 6"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(7).jpg" alt="Dokumentasi Instalasi 7"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(8).jpg" alt="Dokumentasi Instalasi 8"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(9).jpg" alt="Dokumentasi Instalasi 9"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(10).jpg" alt="Dokumentasi Instalasi 10"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(11).jpg" alt="Dokumentasi Instalasi 11"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(12).jpg" alt="Dokumentasi Instalasi 12"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(13).jpg" alt="Dokumentasi Instalasi 13"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(14).jpg" alt="Dokumentasi Instalasi 14"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(15).jpg" alt="Dokumentasi Instalasi 15"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(1).jpg" alt="Watermarked Project 1"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(2).jpg" alt="Watermarked Project 2"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(3).jpg" alt="Watermarked Project 3"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(4).jpg" alt="Watermarked Project 4"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(5).jpg" alt="Watermarked Project 5"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(6).jpg" alt="Watermarked Project 6"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(7).jpg" alt="Watermarked Project 7"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(8).jpg" alt="Watermarked Project 8"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(9).jpg" alt="Watermarked Project 9"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(10).jpg" alt="Watermarked Project 10"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(11).jpg" alt="Watermarked Project 11"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(12).jpg" alt="Watermarked Project 12"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(13).jpg" alt="Watermarked Project 13"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(14).jpg" alt="Watermarked Project 14"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(15).jpg" alt="Watermarked Project 15"></div>
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -118,22 +141,22 @@
                     <p class="text-red-600 font-bold tracking-widest uppercase mb-3 text-sm">Project Highlight</p>
                     <h1 class="text-3xl md:text-4xl font-extrabold text-[#001f3f] mb-6 leading-tight uppercase">Instalasi AC Split Wall</h1>
                     
-                    <div class="space-y-6 text-gray-600 leading-relaxed">
+                    <div class="space-y-6 text-gray-600 leading-relaxed text-sm">
                         <div class="flex gap-4">
                             <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
-                            <p><strong>Standar Vakum:</strong> Penggunaan mesin vakum untuk memastikan sistem bersih dari udara & uap air.</p>
+                            <p><strong>Standar Vakum:</strong> Memastikan sistem bersih dari uap air agar unit dingin maksimal.</p>
                         </div>
                         <div class="flex gap-4">
                             <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
-                            <p><strong>Material Berkualitas:</strong> Pipa tembaga standar ketebalan 0.6mm ke atas untuk menghindari kebocoran.</p>
+                            <p><strong>Material Berkualitas:</strong> Menggunakan pipa tembaga tebal untuk mencegah kebocoran freon.</p>
                         </div>
                         <div class="flex gap-4">
                             <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
-                            <p><strong>Kerapian:</strong> Jalur pipa dibungkus duct tape rapi dan drainase air dipastikan lancar.</p>
+                            <p><strong>Kerapian:</strong> Finishing jalur pipa yang estetis untuk keindahan ruangan Anda.</p>
                         </div>
                     </div>
 
-                    <a href="https://wa.me/6285188188718" class="mt-10 w-full flex justify-center items-center gap-3 bg-red-600 hover:bg-red-700 text-white py-5 rounded-2xl font-bold shadow-xl transition transform hover:-translate-y-1 uppercase tracking-widest">
+                    <a href="https://wa.me/6285188188718" class="mt-10 w-full flex justify-center items-center gap-3 bg-red-600 hover:bg-red-700 text-white py-5 rounded-2xl font-bold shadow-xl transition transform hover:-translate-y-1 uppercase tracking-widest text-sm">
                         <i class="fa-brands fa-whatsapp text-2xl"></i> Booking Layanan
                     </a>
                 </div>
@@ -141,10 +164,10 @@
         </div>
     </main>
 
-    <footer class="bg-black py-16 px-6 md:px-20 border-t border-gray-900 overflow-hidden">
+    <footer class="bg-black py-16 px-6 md:px-20 border-t border-gray-900">
         <div class="max-w-full mx-auto text-center">
-            <img src="Cryo TEch logo2.png" alt="Logo" class="h-14 mx-auto opacity-80 mb-4">
-            <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold leading-tight">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
+            <img src="Cryo TEch logo2.png" alt="Logo" class="h-12 mx-auto opacity-70 mb-4">
+            <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
             <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest">Pasuruan, Jawa Timur</p>
         </div>
     </footer>
@@ -152,23 +175,21 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
-        // Inisialisasi Slider Otomatis
         var swiper = new Swiper(".mySwiper", {
             loop: true,
-            speed: 800,
+            speed: 1000,
             autoplay: {
-                delay: 3000,
+                delay: 4000,
                 disableOnInteraction: false,
             },
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
             },
-            effect: "fade", // Efek transisi halus
+            effect: "fade",
             fadeEffect: { crossFade: true }
         });
 
-        // Toggle Menu Mobile
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
         menuBtn.addEventListener('click', () => {
