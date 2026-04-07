@@ -26,8 +26,6 @@
 
         /* Swiper Custom Styling */
         .swiper { width: 100%; border-radius: 1.5rem; position: relative; }
-        
-        /* Memastikan gambar penuh dan seragam */
         .swiper-slide img { 
             width: 100%; 
             height: 550px; 
@@ -35,7 +33,7 @@
             object-position: center; 
         }
 
-        /* Watermark CSS */
+        /* Watermark */
         .swiper-slide { position: relative; }
         .swiper-slide::after {
             content: "CRYO Tech Pasuruan";
@@ -53,15 +51,33 @@
             border-radius: 4px;
             pointer-events: none;
             z-index: 10;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
+        /* TOMBOL NAVIGASI (PANAH) - Memastikan Muncul */
+        .swiper-button-next, .swiper-button-prev { 
+            color: white !important; 
+            background: rgba(0, 0, 0, 0.4);
+            width: 50px !important;
+            height: 50px !important;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            z-index: 20;
+        }
+        .swiper-button-next:hover, .swiper-button-prev:hover {
+            background: #dc2626;
+            transform: scale(1.1);
+        }
+        .swiper-button-next::after, .swiper-button-prev::after { 
+            font-size: 20px !important; 
+            font-weight: bold; 
+        }
+        
         .swiper-pagination-bullet-active { background: #dc2626 !important; }
 
-        /* Mobile View Height Adjustment */
         @media (max-width: 768px) {
             .swiper-slide img { height: 350px; }
-            .swiper-slide::after { font-size: 10px; bottom: 15px; right: 15px; }
+            /* Sembunyikan panah di HP agar layar bersih, cukup swipe jari */
+            .swiper-button-next, .swiper-button-prev { display: none; } 
         }
     </style>
 </head>
@@ -71,7 +87,7 @@
         <div class="max-w-full mx-auto px-6 md:px-10 flex justify-between items-center relative">
             <div class="flex items-center gap-3">
                 <img src="Cryo TEch logo2.png" alt="Logo CRYO Tech" class="h-10 w-auto">
-                <span class="font-bold tracking-tight uppercase">CRYO TECH</span>
+                <span class="font-bold tracking-tight uppercase text-white">CRYO TECH</span>
             </div>
 
             <button id="menu-btn" class="lg:hidden text-2xl focus:outline-none z-50">
@@ -83,9 +99,8 @@
                 <li><a href="index.html#services" class="hover:text-red-600 transition block py-2">Services</a></li>
                 <li><a href="about.html" class="hover:text-red-600 transition block py-2">Tentang Kami</a></li>
                 <li><a href="gallery.html" class="text-red-600 transition block py-2 font-bold border-b-2 border-red-600 lg:border-none">Gallery</a></li>
-                
                 <li class="relative group">
-                    <button class="hover:text-red-600 transition flex items-center justify-between w-full lg:w-auto gap-1 focus:outline-none uppercase py-2">
+                    <button class="hover:text-red-600 transition flex items-center justify-between w-full lg:w-auto gap-1 focus:outline-none uppercase py-2 text-white">
                         Harga <i class="fa-solid fa-chevron-down text-[10px] group-hover:rotate-180 transition-transform"></i>
                     </button>
                     <div class="lg:absolute left-0 mt-2 w-full lg:w-64 bg-white text-slate-800 rounded-xl shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible dropdown-animate border border-gray-100 overflow-hidden z-[100]">
@@ -100,7 +115,7 @@
     </nav>
 
     <main class="py-16 px-6 md:px-20 max-w-7xl mx-auto">
-        <a href="gallery.html" class="inline-flex items-center gap-2 text-red-600 font-bold mb-10 hover:gap-4 transition-all uppercase tracking-wider text-sm text-shadow-sm">
+        <a href="gallery.html" class="inline-flex items-center gap-2 text-red-600 font-bold mb-10 hover:gap-4 transition-all uppercase tracking-wider text-sm">
             <i class="fa-solid fa-arrow-left"></i> Kembali ke Galeri
         </a>
 
@@ -108,22 +123,26 @@
             <div class="w-full lg:w-3/5 space-y-6">
                 <div class="swiper mySwiper shadow-2xl border-4 border-white">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(1).jpg" alt="Watermarked Project 1"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(2).jpg" alt="Watermarked Project 2"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(3).jpg" alt="Watermarked Project 3"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(4).jpg" alt="Watermarked Project 4"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(5).jpg" alt="Watermarked Project 5"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(6).jpg" alt="Watermarked Project 6"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(7).jpg" alt="Watermarked Project 7"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(8).jpg" alt="Watermarked Project 8"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(9).jpg" alt="Watermarked Project 9"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(10).jpg" alt="Watermarked Project 10"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(11).jpg" alt="Watermarked Project 11"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(12).jpg" alt="Watermarked Project 12"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(13).jpg" alt="Watermarked Project 13"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(14).jpg" alt="Watermarked Project 14"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(15).jpg" alt="Watermarked Project 15"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(1).jpg" alt="Instalasi AC 1"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(2).jpg" alt="Instalasi AC 2"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(3).jpg" alt="Instalasi AC 3"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(4).jpg" alt="Instalasi AC 4"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(5).jpg" alt="Instalasi AC 5"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(6).jpg" alt="Instalasi AC 6"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(7).jpg" alt="Instalasi AC 7"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(8).jpg" alt="Instalasi AC 8"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(9).jpg" alt="Instalasi AC 9"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(10).jpg" alt="Instalasi AC 10"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(11).jpg" alt="Instalasi AC 11"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(12).jpg" alt="Instalasi AC 12"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(13).jpg" alt="Instalasi AC 13"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(14).jpg" alt="Instalasi AC 14"></div>
+                        <div class="swiper-slide"><img src="Split%20AC/split%20(15).jpg" alt="Instalasi AC 15"></div>
                     </div>
+                    
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    
                     <div class="swiper-pagination"></div>
                 </div>
 
@@ -140,7 +159,6 @@
                 <div class="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-xl border border-gray-100 sticky top-28">
                     <p class="text-red-600 font-bold tracking-widest uppercase mb-3 text-sm">Project Highlight</p>
                     <h1 class="text-3xl md:text-4xl font-extrabold text-[#001f3f] mb-6 leading-tight uppercase">Instalasi AC Split Wall</h1>
-                    
                     <div class="space-y-6 text-gray-600 leading-relaxed text-sm">
                         <div class="flex gap-4">
                             <i class="fa-solid fa-circle-check text-green-500 mt-1"></i>
@@ -155,7 +173,6 @@
                             <p><strong>Kerapian:</strong> Finishing jalur pipa yang estetis untuk keindahan ruangan Anda.</p>
                         </div>
                     </div>
-
                     <a href="https://wa.me/6285188188718" class="mt-10 w-full flex justify-center items-center gap-3 bg-red-600 hover:bg-red-700 text-white py-5 rounded-2xl font-bold shadow-xl transition transform hover:-translate-y-1 uppercase tracking-widest text-sm">
                         <i class="fa-brands fa-whatsapp text-2xl"></i> Booking Layanan
                     </a>
@@ -167,20 +184,26 @@
     <footer class="bg-black py-16 px-6 md:px-20 border-t border-gray-900">
         <div class="max-w-full mx-auto text-center">
             <img src="Cryo TEch logo2.png" alt="Logo" class="h-12 mx-auto opacity-70 mb-4">
-            <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
-            <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest">Pasuruan, Jawa Timur</p>
+            <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold leading-tight">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
+            <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest font-medium">Pasuruan, Jawa Timur</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script>
+        // INISIALISASI SWIPER DENGAN NAVIGASI AKTIF
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             speed: 1000,
             autoplay: {
                 delay: 4000,
                 disableOnInteraction: false,
+            },
+            // Bagian ini yang mengaktifkan panah
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
             },
             pagination: {
                 el: ".swiper-pagination",
