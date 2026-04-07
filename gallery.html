@@ -191,5 +191,27 @@
             icon.classList.toggle('fa-xmark');
         });
     </script>
+    <a href="https://wa.me/6285188188718" 
+   class="fixed bottom-8 right-8 bg-green-600 text-white p-5 rounded-full shadow-2xl hover:scale-110 transition-all z-[100] group flex items-center justify-center animate-bounce-subtle">
+    
+    <span class="absolute right-full mr-4 bg-white text-slate-900 px-4 py-2 rounded-xl text-sm font-bold shadow-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none whitespace-nowrap border border-gray-100">
+        Butuh bantuan? Chat kami!
+    </span>
+
+    <i class="fa-brands fa-whatsapp text-4xl"></i>
+    
+    <span class="absolute inset-0 rounded-full bg-green-600 opacity-20 animate-ping"></span>
+</a>
+
+<style>
+    /* Animasi halus naik-turun agar tombol lebih "hidup" */
+    @keyframes bounce-subtle {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-5px); }
+    }
+    .animate-bounce-subtle {
+        animation: bounce-subtle 3s infinite ease-in-out;
+    }
+</style>
 </body>
 </html>
