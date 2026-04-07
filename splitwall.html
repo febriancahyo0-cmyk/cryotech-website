@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
     
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Roboto:wght@300;400;500&display=swap');
@@ -26,13 +27,12 @@
 
         /* Swiper Custom Styling */
         .swiper { width: 100%; border-radius: 1.5rem; position: relative; overflow: hidden; }
-        
-        /* Memastikan gambar penuh & seragam */
         .swiper-slide img { 
             width: 100%; 
             height: 550px; 
             object-fit: cover; 
             object-position: center; 
+            cursor: zoom-in;
         }
 
         /* Watermark */
@@ -55,7 +55,7 @@
             z-index: 10;
         }
 
-        /* EFEK NAVIGASI HOVER (Muncul saat kursor masuk) */
+        /* EFEK NAVIGASI HOVER */
         .swiper-button-next, .swiper-button-prev { 
             color: white !important; 
             background: rgba(0, 0, 0, 0.4);
@@ -64,7 +64,7 @@
             border-radius: 50%;
             transition: all 0.3s ease-in-out;
             z-index: 20;
-            opacity: 0; /* Tersembunyi default */
+            opacity: 0;
         }
         
         .swiper-button-next { transform: translateX(20px); }
@@ -83,7 +83,7 @@
 
         @media (max-width: 768px) {
             .swiper-slide img { height: 350px; }
-            .swiper-button-next, .swiper-button-prev { display: none; } /* Tetap swipe di HP */
+            .swiper-button-next, .swiper-button-prev { display: none; }
         }
     </style>
 </head>
@@ -129,34 +129,37 @@
             <div class="w-full lg:w-3/5 space-y-6">
                 <div class="swiper mySwiper shadow-2xl border-4 border-white">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(1).jpg" alt="Instalasi AC 1"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(2).jpg" alt="Instalasi AC 2"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(3).jpg" alt="Instalasi AC 3"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(4).jpg" alt="Instalasi AC 4"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(5).jpg" alt="Instalasi AC 5"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(6).jpg" alt="Instalasi AC 6"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(7).jpg" alt="Instalasi AC 7"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(8).jpg" alt="Instalasi AC 8"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(9).jpg" alt="Instalasi AC 9"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(10).jpg" alt="Instalasi AC 10"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(11).jpg" alt="Instalasi AC 11"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(12).jpg" alt="Instalasi AC 12"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(13).jpg" alt="Instalasi AC 13"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(14).jpg" alt="Instalasi AC 14"></div>
-                        <div class="swiper-slide"><img src="Split%20AC/split%20(15).jpg" alt="Instalasi AC 15"></div>
+                        <div class="swiper-slide">
+                            <a href="Split%20AC/split%20(1).jpg" data-fancybox="gallery">
+                                <img src="Split%20AC/split%20(1).jpg" alt="Instalasi AC 1">
+                            </a>
+                        </div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(2).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(2).jpg" alt="Instalasi AC 2"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(3).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(3).jpg" alt="Instalasi AC 3"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(4).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(4).jpg" alt="Instalasi AC 4"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(5).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(5).jpg" alt="Instalasi AC 5"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(6).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(6).jpg" alt="Instalasi AC 6"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(7).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(7).jpg" alt="Instalasi AC 7"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(8).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(8).jpg" alt="Instalasi AC 8"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(9).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(9).jpg" alt="Instalasi AC 9"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(10).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(10).jpg" alt="Instalasi AC 10"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(11).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(11).jpg" alt="Instalasi AC 11"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(12).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(12).jpg" alt="Instalasi AC 12"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(13).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(13).jpg" alt="Instalasi AC 13"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(14).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(14).jpg" alt="Instalasi AC 14"></a></div>
+                        <div class="swiper-slide"><a href="Split%20AC/split%20(15).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(15).jpg" alt="Instalasi AC 15"></a></div>
                     </div>
-                    
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
 
                 <div class="grid grid-cols-5 gap-2">
-                    <img src="Split%20AC/split%20(1).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
-                    <img src="Split%20AC/split%20(2).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
-                    <img src="Split%20AC/split%20(3).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
-                    <img src="Split%20AC/split%20(4).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
-                    <img src="Split%20AC/split%20(5).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200">
+                    <a href="Split%20AC/split%20(1).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(1).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200"></a>
+                    <a href="Split%20AC/split%20(2).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(2).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200"></a>
+                    <a href="Split%20AC/split%20(3).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(3).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200"></a>
+                    <a href="Split%20AC/split%20(4).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(4).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200"></a>
+                    <a href="Split%20AC/split%20(5).jpg" data-fancybox="gallery"><img src="Split%20AC/split%20(5).jpg" class="rounded-lg aspect-square object-cover opacity-60 hover:opacity-100 transition cursor-pointer border border-gray-200"></a>
                 </div>
             </div>
 
@@ -186,36 +189,36 @@
         </div>
     </main>
 
-    <footer class="bg-black py-16 px-6 md:px-20 border-t border-gray-900">
-        <div class="max-w-full mx-auto text-center">
-            <img src="Cryo TEch logo2.png" alt="Logo" class="h-10 mx-auto opacity-70 mb-4">
-            <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
-            <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest">Pasuruan, Jawa Timur</p>
-        </div>
+    <footer class="bg-black py-16 px-6 md:px-20 border-t border-gray-900 text-center">
+        <img src="Cryo TEch logo2.png" alt="Logo" class="h-10 mx-auto opacity-70 mb-4">
+        <p class="uppercase tracking-widest text-gray-500 text-[10px] font-bold">© 2026 CRYO Tech HVAC & Refrigeration Specialist.</p>
+        <p class="text-[10px] text-gray-700 mt-1 italic tracking-widest">Pasuruan, Jawa Timur</p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
 
     <script>
+        // Inisialisasi Swiper
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             speed: 1000,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
+            pagination: { el: ".swiper-pagination", clickable: true },
             effect: "fade",
             fadeEffect: { crossFade: true }
         });
 
+        // Inisialisasi Fancybox (Popup)
+        Fancybox.bind("[data-fancybox='gallery']", {
+            compact: false,
+            idle: false,
+            dragToClose: false,
+            Toolbar: { display: { left: ["infobar"], middle: [], right: ["iterateZoom", "close"] } }
+        });
+
+        // Toggle Menu Mobile
         const menuBtn = document.getElementById('menu-btn');
         const menu = document.getElementById('menu');
         menuBtn.addEventListener('click', () => {
